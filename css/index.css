@@ -502,7 +502,7 @@ body{
 }
 .about-main{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100vw;
     height: auto;
@@ -533,7 +533,8 @@ body{
     transition: all .4s ease;
 }
 .cv {
-    padding-top: 40px;
+    padding-top: 0px;
+    padding-bottom: 30px;
 }
 .cv a button{
     background: transparent;
