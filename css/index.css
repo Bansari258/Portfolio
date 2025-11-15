@@ -3,15 +3,20 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
 
 :root {
-  --bg-color: #ffffff;
-  --text-color: #101010;
-  --text-secondary: #333333;
-  --accent-color: #c70039;
-  --border-color: #e0e0e0;
-  --card-bg: #f9f9f9;
-  --hover-bg: #f1f1f1;
-  --radius: 12px;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --bg-color: #fafbff;
+  --text-color: #0a0e27;
+  --text-secondary: #4a5568;
+  --accent-color: #6366f1;
+  --accent-dark: #4f46e5;
+  --accent-light: #818cf8;
+  --border-color: #e2e8f0;
+  --card-bg: #f8fafc;
+  --hover-bg: #f1f5f9;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+  --shadow-lg: 0 20px 40px rgba(99, 102, 241, 0.15);
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  --gradient-dark: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
 }
 
 * {
@@ -22,12 +27,12 @@
 
 ::-webkit-scrollbar {
   width: 4px;
-  color: #c70039;
+  color: var(--accent-color);
   transition: all 0.4s ease;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c70039;
+  background: var(--accent-color);
   border-radius: 4px;
   width: 4px;
   transition: all 0.4s ease;
@@ -85,6 +90,34 @@ body {
   overflow-x: hidden;
   width: 100%;
   background: var(--bg-color);
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.button, button, .btn-custom {
+  display: inline-block;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.button:hover, .btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 #header {
@@ -269,34 +302,39 @@ body {
   transform: rotate(-45deg);
 }
 
-.header-image img {
-  height: 100vh;
-  float: right;
+/* .header-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .header-image {
   float: right;
-  height: auto;
+  height: 100%;
+  background: var(--gradient-primary);
   background-size: cover;
   background-position: center;
   width: 40%;
-  height: 100vh;
-}
+  min-height: 420px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+} */
 
 .header-content {
-  height: 100vh;
+  min-height: 72vh;
   width: 100%;
-  float: left;
   display: flex;
-  position: absolute;
+  position: relative;
   align-items: center;
   justify-content: center;
   color: var(--text-color);
-  font-family: raleway;
+  font-family: raleway, 'Poppins', sans-serif;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
   flex-direction: column;
-  font-size: 50px;
+  font-size: 42px;
+  padding: 40px 20px;
   z-index: 1;
 }
 
@@ -312,17 +350,19 @@ body {
   z-index: 2;
   font-weight: 700;
   font-family: poppins;
-  font-size: 65px;
+  font-size: 48px;
 }
 
 .header-content .midline {
   z-index: 2;
   font-weight: 300;
-  font-size: 23px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  margin-inline: 250px;
-  padding-top: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  max-width: 920px;
+  margin: 18px auto 0 auto;
+  padding-top: 18px;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -372,15 +412,15 @@ body {
 }
 
 .social-media-links {
-  height: 100vh;
   position: absolute;
   z-index: 2;
-  padding: 60px;
+  padding: 24px;
   width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
 .social-media {
@@ -476,7 +516,7 @@ body {
 #breaker {
   height: 100vh;
   width: 200%;
-  background-color: #c70039;
+  background-color: var(--accent-color);
   opacity: 1;
   animation: breakeranimate 2s linear;
   display: none;
@@ -515,7 +555,7 @@ body {
 }
 
 .color {
-  color: #c70039;
+  color: var(--accent-color);
   transition: all 0.4s ease;
 }
 
@@ -658,7 +698,7 @@ body {
   font-family: aileron;
   font-weight: 400;
   font-size: 35px;
-  color: #c70039;
+  color: var(--accent-color);
   transition: all 0.4s ease;
 }
 
@@ -672,7 +712,7 @@ body {
   border: none;
   padding: 15px 30px;
   color: var(--bg-color);
-  background: #c70039;
+  background: var(--accent-color);
   outline: none;
   font-size: 20px;
   font-family: aileron;
@@ -752,15 +792,15 @@ body {
   margin: 20px;
   border-radius: 30%;
   padding: 10px;
-  border: 0px solid #c70039;
-  background: #c70039;
-  box-shadow: 0px 0px 0px 0px #c70039;
+  border: 0px solid var(--accent-color);
+  background: var(--accent-color);
+  box-shadow: 0px 0px 0px 0px var(--accent-color);
   height: 100px;
   transition: all 0.8s ease;
 }
 
 .service:hover .service-img img {
-  box-shadow: 0px 0px 0px 400px #c70039;
+  box-shadow: 0px 0px 0px 400px var(--accent-color);
 }
 
 .service-description {
@@ -857,7 +897,7 @@ body {
   transition: all 0.4s ease;
   width: 95%;
   border-radius: 10px;
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .js-progress {
@@ -872,7 +912,7 @@ body {
   transition: all 0.4s ease;
   width: 90%;
   border-radius: 10px;
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .adobe-progress {
@@ -886,7 +926,7 @@ body {
   transition: all 0.4s ease;
   width: 83%;
   border-radius: 10px;
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .php-progress {
@@ -899,7 +939,7 @@ body {
   justify-content: center;
   width: 85%;
   border-radius: 10px;
-  background: #c70039;
+  background: var(--accent-color);
   transition: all 0.4s ease;
 }
 
@@ -914,7 +954,7 @@ body {
   transition: all 0.4s ease;
   width: 94%;
   border-radius: 10px;
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .seo-progress {
@@ -928,7 +968,7 @@ body {
   width: 84%;
   border-radius: 10px;
   transition: all 0.4s ease;
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .portfolio-header {
@@ -989,7 +1029,7 @@ body {
   font-family: poppins;
   font-weight: 200;
   padding: 20px;
-  color: #c70039;
+  color: var(--accent-color);
   transition: all 0.4s ease;
 }
 
@@ -1008,11 +1048,11 @@ body {
   font-weight: 200;
   padding: 10px 20px;
   background: transparent;
-  color: #c70039;
+  color: var(--accent-color);
   transition: all 0.4s ease;
   outline: none;
   margin: 20px;
-  border: 1.5px solid #c70039;
+  border: 1.5px solid var(--accent-color);
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -1028,7 +1068,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
-  background: #c70039;
+  background: var(--accent-color);
   transition: all 0.7s ease;
 }
 
@@ -1066,7 +1106,7 @@ button:hover .index {
   content: "";
   height: 100%;
   width: 100%;
-  background: #c70039;
+  background: var(--accent-color);
   opacity: 0.1;
   top: 0;
   left: 0;
@@ -1175,7 +1215,7 @@ button:hover .index {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #c70039;
+  background: var(--accent-color);
   color: var(--text-color);
   font-size: 18px;
   text-align: center;
@@ -1327,15 +1367,16 @@ form {
 
 .input-name {
   width: 40%;
-  padding: 10px 20px;
-  margin: 14px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 12px;
+  border-radius: 10px;
   outline: none;
-  background: var(--card-bg);
-  border: none;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   font-family: poppins;
-  font-size: 18px;
+  font-size: 16px;
+  transition: all 0.25s ease;
 }
 
 .form-header {
@@ -1348,47 +1389,51 @@ form {
 
 .input-subject {
   width: 84%;
-  padding: 10px 20px;
-  margin: 24px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 20px;
+  border-radius: 10px;
   outline: none;
-  background: var(--card-bg);
-  border: none;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   font-family: poppins;
-  font-size: 18px;
+  font-size: 16px;
+  transition: all 0.25s ease;
 }
 
 .input-textarea {
   width: 84%;
-  padding: 10px 20px;
+  padding: 12px 18px;
   margin: 15px;
   height: 150px;
-  border-radius: 8px;
+  border-radius: 10px;
   outline: none;
-  background: var(--card-bg);
-  border: none;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   font-family: poppins;
-  font-size: 18px;
+  font-size: 16px;
+  transition: all 0.25s ease;
 }
 
 form button {
-  padding: 8px 24px;
+  padding: 10px 28px;
   font-family: poppins;
-  font-size: 20px;
-  color: var(--bg-color);
-  background: #bb0035;
-  opacity: 0.8;
-  margin: 20px;
+  font-size: 16px;
+  color: #fff;
+  background: var(--accent-color);
+  opacity: 0.95;
+  margin: 20px 0;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
-  transition: all 0.4s ease;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(99,102,241,0.12);
 }
 
 form button:hover {
-  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(99,102,241,0.18);
 }
 
 .contact-info-header {
@@ -1519,7 +1564,7 @@ form button:hover {
 }
 
 .color-red {
-  background: #c70039;
+  background: var(--accent-color);
 }
 
 .color-purple {
@@ -1639,7 +1684,7 @@ For devices with smaller width like mobile phone
   #breaker {
     height: 50vh;
     width: 200%;
-    background-color: #c70039;
+    background-color: var(--accent-color);
     opacity: 1;
     animation: breakeranimate 2s linear;
     display: none;
@@ -1846,7 +1891,7 @@ For devices with smaller width like mobile phone
   }
 
   .service:hover .service-img img {
-    box-shadow: 0px 0px 0px 0px #c70039;
+    box-shadow: 0px 0px 0px 0px var(--accent-color);
   }
 
   .portfolio-image img {
@@ -2165,7 +2210,7 @@ for tabs and large phones
   #breaker {
     height: 50vh;
     width: 200%;
-    background-color: #c70039;
+    background-color: var(--accent-color);
     opacity: 1;
     animation: breakeranimate 2s linear;
     display: none;
@@ -2389,7 +2434,7 @@ for tabs and large phones
   }
 
   .service:hover .service-img img {
-    box-shadow: 0px 0px 0px 0px #c70039;
+    box-shadow: 0px 0px 0px 0px var(--accent-color);
   }
 
   .portfolio-image img {
@@ -3493,3 +3538,4 @@ for tabs and large phones
 
 
 }
+ 
