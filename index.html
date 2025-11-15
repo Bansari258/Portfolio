@@ -41,6 +41,7 @@
                 <a href="#about" data-text="ABOUT" id="about-link">ABOUT</a>
                 <a href="#services" data-text="SERVICES" id="services-link">SERVICES</a>
                 <a href="#work" data-text="WORK" id="work-link">WORK</a>
+                <a href="#achievements" data-text="ACHIEVEMENTS" id="achievements-link">ACHIEVEMENTS</a>
                 <a href="#blog" data-text="BLOG" id="blog-link">BLOG</a>
                 <a href="#contact" data-text="CONTACT" id="contact-link">CONTACT</a>
             </div>
@@ -183,6 +184,18 @@
             <div class="work-grid">
                 <div class="work-item fade-in-up stagger-1">
                     <div class="work-image">
+                        <img src="./images/airbnb.png" alt="Wanderlust">
+                    </div>
+                    <div class="work-info">
+                        <h3>Wanderlust - Find Your Perfect Stay</h3>
+                        <p>An Airbnb clone platform built with modern web technologies. Users can browse and book accommodations, list their properties, and manage reservations. Features include real-time availability, secure payments, ratings and reviews system, and an intuitive user interface.</p>
+                    </div>
+                    <div class="work-overlay">
+                        <a class="button" href="https://github.com/Bansari258/Wanderlust-" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="work-item fade-in-up stagger-2">
+                    <div class="work-image">
                         <img src="./images/work/foodflex.png" alt="Foodflex">
                     </div>
                     <div class="work-info">
@@ -194,7 +207,7 @@
                         <a class="button" href="https://github.com/Bansari258/FoodFlex">View Project</a>
                     </div>
                 </div>
-                <div class="work-item fade-in-up stagger-2">
+                <div class="work-item fade-in-up stagger-3">
                     <div class="work-image">
                         <img src="./images/work/chatapp.png" alt="ChatApp">
                     </div>
@@ -206,7 +219,7 @@
                         <a class="button" href="https://github.com/Bansari258/ChatApp" target="_blank">View Project</a>
                     </div>
                 </div>
-                <div class="work-item fade-in-up stagger-3">
+                <div class="work-item fade-in-up stagger-4">
                     <div class="work-image">
                         <img src="./images/work/gamehub.png" alt="Game Hub">
                     </div>
@@ -218,18 +231,68 @@
                         <a class="button" href="https://github.com/Bansari258/Games/">View Project</a>
                     </div>
                 </div>
-                <div class="work-item fade-in-up stagger-4">
-                    <div class="work-image">
-                        <img src="./images/work/foodflex-p.png" alt="Foodflex">
+               
+            </div>
+        </div>
+        <div id="achievements">
+            <div class="section-header mb-3">
+                <span class="color">My</span> Achievements
+                <span class="header-caption">A showcase of my <span class="color">degrees, certificates</span> and
+                    <span class="color">professional milestones</span>.</span>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in-up stagger-1">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/mca-degree.jpg" alt="MCA Degree">
                     </div>
-                    <div class="work-info">
-                        <h3>FoodFlex-Python</h3>
-                        <p>Advanced food ordering system built with Python-Django. Supports user accounts, vendor item
-                            management, and complete
-                            admin control.</p>
+                    <div class="achievement-info">
+                        <h3>Master of Computer Applications</h3>
+                        <p>IGNOU University - Successfully completed MCA with focus on software development and advanced programming concepts.</p>
                     </div>
-                    <div class="work-overlay">
-                        <a class="button" href="https://github.com/Bansari258/Foodflex-python">View Project</a>
+                </div>
+                <div class="achievement-card fade-in-up stagger-2">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/bca-degree.jpg" alt="BCA Degree">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>Bachelor of Computer Applications</h3>
+                        <p>Gujarat University - Completed BCA degree with strong foundation in computer science fundamentals and programming.</p>
+                    </div>
+                </div>
+                <div class="achievement-card fade-in-up stagger-3">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/certificate-1.jpg" alt="Certificate">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>Professional Development Certificate</h3>
+                        <p>Certificate in advanced web development technologies and best practices in modern frontend and backend development.</p>
+                    </div>
+                </div>
+                <div class="achievement-card fade-in-up stagger-4">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/certificate-2.jpg" alt="Certificate">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>React & Node.js Specialist</h3>
+                        <p>Certification in React.js and Node.js - Demonstrating expertise in building scalable full-stack applications.</p>
+                    </div>
+                </div>
+                <div class="achievement-card fade-in-up stagger-5">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/certificate-3.jpg" alt="Certificate">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>UI/UX Design Certificate</h3>
+                        <p>Professional certificate in UI/UX design principles, user research, and prototyping with modern design tools.</p>
+                    </div>
+                </div>
+                <div class="achievement-card fade-in-up stagger-6">
+                    <div class="achievement-image">
+                        <img src="./images/achievements/certificate-4.jpg" alt="Certificate">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>Mobile App Development</h3>
+                        <p>Certification in React Native and mobile app development - Building cross-platform applications for iOS and Android.</p>
                     </div>
                 </div>
             </div>
@@ -393,6 +456,7 @@
                 gsap.to('#about', 0, { display: "none" });
                 gsap.to('#work', 0, { display: "none" });
                 gsap.to('#blog', 0, { display: "none" });
+                gsap.to('#achievements', 0, { display: "none" });
                 gsap.to('#contact', 0, { display: "none" });
                 gsap.to('#breaker', 0, { display: "block" });
                 gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
@@ -408,6 +472,7 @@
                 gsap.to('#about', 0, { display: "none" });
                 gsap.to('#services', 0, { display: "none" });
                 gsap.to('#blog', 0, { display: "none" });
+                gsap.to('#achievements', 0, { display: "none" });
                 gsap.to('#contact', 0, { display: "none" });
                 gsap.to('#breaker', 0, { display: "block" });
                 gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
@@ -423,6 +488,7 @@
                 gsap.to('#about', 0, { display: "none" });
                 gsap.to('#services', 0, { display: "none" });
                 gsap.to('#work', 0, { display: "none" });
+                gsap.to('#achievements', 0, { display: "none" });
                 gsap.to('#contact', 0, { display: "none" });
                 gsap.to('#breaker', 0, { display: "block" });
                 gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
