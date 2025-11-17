@@ -3591,21 +3591,40 @@ for tabs and large phones
     font-size: 2rem;
   }
 }
-@media (max-width: 768px){
-  .service-card{
-    padding: 15px;
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 10px;
     width: auto;
-    margin: 20px;
+    margin: 10px;
   }
-  .service-card h3{
+
+  .service-card h3 {
     font-size: 1.1rem;
   }
-  .service-card ul{
+
+  .service-card ul {
     padding-left: 0.5rem !important;
-  
+
   }
+
   .services-grid.mx-5 {
-    margin-right: 0.5rem !important;
-    margin-left: 0.5rem !important;
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .services-grid .mt-5 {
+    margin-top: 1rem !important;
+  }
 }
+@media (max-width: 568px) {
+  .service-card  {
+      height: 350px;
+
+  }
+}
+@media (max-width: 468px) {
+  .service-card ul {
+    font-size: 14px;
+  }
 }
