@@ -93,7 +93,6 @@ $(function () {
     gsap.to('#header', 0, { display: "none" });
     gsap.to('#blog', 0, { display: "none" });
     gsap.to('#portfolio', 0, { display: "none" });
-    gsap.to('#achievements', 0, { display: "none" });
     gsap.to('#breaker', 0, { display: "block" });
     gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
     gsap.to('#contact', 0, { display: "none" });
@@ -109,7 +108,6 @@ $(function () {
     gsap.to('#about', 0, { display: "none" });
     gsap.to('#blog', 0, { display: "none" });
     gsap.to('#portfolio', 0, { display: "none" });
-    gsap.to('#achievements', 0, { display: "none" });
     gsap.to('#breaker', 0, { display: "block" });
     gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
     gsap.to('#breaker', 0, { display: "none", delay: 2 });
@@ -124,7 +122,6 @@ $(function () {
     gsap.to('#about', 0, { display: "none" });
     gsap.to('#contact', 0, { display: "none" });
     gsap.to('#blog', 0, { display: "none" });
-    gsap.to('#achievements', 0, { display: "none" });
     gsap.to('#breaker', 0, { display: "block" });
     gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
     gsap.to('#breaker', 0, { display: "none", delay: 2 });
@@ -214,3 +211,21 @@ $(function () {
 
 
 /* -------------------------------------------------------------------------- */
+// Function to set modal content based on clicked card
+function setModalContent(card) {
+    const imgSrc = card.querySelector('.achievement-image img').src;
+    const title = card.querySelector('.achievement-info h3').textContent;
+    const desc = card.querySelector('.achievement-info p').textContent;
+
+    document.getElementById('modalImage').src = imgSrc;
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalDesc').textContent = desc;
+}
+
+// Initialize Bootstrap tooltips
+document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle-tooltip="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
